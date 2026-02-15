@@ -1,0 +1,139 @@
+.page {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0 2.5rem;
+}
+
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.kicker {
+  font-family: var(--font-mono), monospace;
+  color: var(--accent-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.77rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.95rem;
+  font-size: 0.9rem;
+}
+
+.primaryAction {
+  background: var(--accent);
+  color: white;
+  border-color: color-mix(in srgb, var(--accent) 70%, black);
+}
+
+.primaryAction:hover {
+  background: var(--accent-strong);
+}
+
+.secondaryAction {
+  background: color-mix(in srgb, var(--surface-strong) 75%, white);
+}
+
+.secondaryAction:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.65rem;
+}
+
+.metricGrid article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.85rem;
+}
+
+.metricGrid h2 {
+  font-size: 1.3rem;
+}
+
+.metricGrid p {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.preview {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.previewHeader h2 {
+  font-size: 1.05rem;
+}
+
+.previewHeader p {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.preview ul {
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.preview li {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.55rem 0.65rem;
+  display: flex;
+  gap: 0.55rem;
+}
+
+.preview li span:first-child {
+  font-family: var(--font-mono), monospace;
+  min-width: 1.2rem;
+  color: var(--accent-strong);
+}
+
+@media (max-width: 720px) {
+  .previewHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

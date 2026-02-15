@@ -1,0 +1,78 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.headingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.headingRow h2 {
+  font-size: 1.1rem;
+}
+
+.headingRow p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.timeline {
+  margin-left: 1.2rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.timeline li {
+  padding-left: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.layerBlock {
+  border-top: 1px dashed var(--border);
+  padding-top: 0.9rem;
+}
+
+.layerBlock h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.layerGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.layerCard {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.75rem;
+  background: color-mix(in srgb, var(--surface-strong) 78%, white);
+}
+
+.layerCard h4 {
+  font-size: 0.94rem;
+  margin-bottom: 0.4rem;
+}
+
+.layerCard ul {
+  margin-left: 1rem;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.84rem;
+}
+
+@media (max-width: 720px) {
+  .headingRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

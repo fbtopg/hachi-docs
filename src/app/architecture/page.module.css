@@ -1,0 +1,127 @@
+.page {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0 2.5rem;
+}
+
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.35rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.kicker {
+  font-family: var(--font-mono), monospace;
+  color: var(--accent-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  margin-bottom: 0.45rem;
+}
+
+.summary {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.summary code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  background: color-mix(in srgb, var(--accent-soft) 68%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, white);
+  border-radius: 8px;
+  padding: 0.08rem 0.35rem;
+}
+
+.metadata {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.75rem;
+  background: color-mix(in srgb, var(--surface-strong) 84%, white);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.metadata div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.7rem;
+  border-bottom: 1px dashed color-mix(in srgb, var(--border) 86%, white);
+  padding-bottom: 0.35rem;
+}
+
+.metadata div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.metadata dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.metadata dd {
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.asciiPanel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.blockHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.blockHeader h2 {
+  font-size: 1.04rem;
+}
+
+.blockHeader p {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.asciiPanel pre {
+  max-height: 320px;
+  overflow: auto;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  background: color-mix(in srgb, var(--surface-strong) 78%, white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .blockHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

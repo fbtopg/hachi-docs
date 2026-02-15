@@ -1,0 +1,102 @@
+:root {
+  --canvas: #f4f1eb;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #fff9ef;
+  --ink: #1f2735;
+  --muted: #4a5d73;
+  --border: #d8dee8;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --accent-soft: #d1fae5;
+  --shadow: 0 16px 40px rgba(31, 39, 53, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 14% 0%, #ffedd5 0%, transparent 34%),
+    radial-gradient(circle at 86% 8%, #dcfce7 0%, transparent 40%),
+    var(--canvas);
+  font-family: var(--font-display), "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-shell {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  margin-top: 1rem;
+  background: color-mix(in srgb, var(--surface) 84%, white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.brand-block {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.brand-tag {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.brand-name {
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.38rem 0.72rem;
+  background: color-mix(in srgb, var(--surface-strong) 78%, white);
+}
+
+.site-nav a:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+@media (max-width: 780px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
